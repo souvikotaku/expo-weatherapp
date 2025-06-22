@@ -4,10 +4,12 @@ import {
   Text,
   FlatList,
   Button,
+  Image,
   StyleSheet,
   TouchableOpacity,
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import * as Animatable from 'react-native-animatable';
 
 export default function WeatherScreen({ route, navigation }) {
   const { city } = route.params;
@@ -65,6 +67,25 @@ export default function WeatherScreen({ route, navigation }) {
     await AsyncStorage.setItem('tempUnit', newUnit);
   };
 
+  // Component to render static icon with pulse animation
+  const WeatherIcon = ({ iconCode, size = 100 }) => {
+    return (
+      <Animatable.Image
+        source={{ uri: `https://openweathermap.org/img/wn/${iconCode}@2x.png` }}
+        style={{
+          width: size,
+          height: size,
+          alignSelf: 'center',
+          marginVertical: 10,
+          tintColor: '#00ffff', // Neon cyan tint
+        }}
+        animation='pulse'
+        iterationCount='infinite'
+        duration={2000}
+      />
+    );
+  };
+
   if (loading) {
     return (
       <View style={styles.container}>
@@ -95,6 +116,7 @@ export default function WeatherScreen({ route, navigation }) {
           day: 'numeric',
         })}
       </Text>
+      <WeatherIcon iconCode={item.weather[0].icon} size={50} />
       <Text style={styles.forecastText}>
         Temp: {item.main.temp}°{unit === 'metric' ? 'C' : 'F'}
       </Text>
@@ -106,6 +128,7 @@ export default function WeatherScreen({ route, navigation }) {
     <View style={styles.container}>
       <Text style={styles.title}>Weather in {city}</Text>
       <View style={styles.weatherCard}>
+        <WeatherIcon iconCode={weatherData.weather[0].icon} size={100} />
         <Text style={styles.weatherText}>
           Temperature: {weatherData.main.temp}°{unit === 'metric' ? 'C' : 'F'}
         </Text>
@@ -168,9 +191,6 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: 'yellow',
     marginVertical: 10,
-    // textShadowColor: '#00ffff',
-    // textShadowOffset: { width: 0, height: 0 },
-    // textShadowRadius: 8,
   },
   weatherCard: {
     backgroundColor: '#2a2a4a',
@@ -184,6 +204,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.6,
     shadowRadius: 6,
     elevation: 4,
+    alignItems: 'center',
   },
   weatherText: {
     fontSize: 18,
@@ -192,6 +213,7 @@ const styles = StyleSheet.create({
     textShadowColor: '#ff00ff',
     textShadowOffset: { width: 0, height: 0 },
     textShadowRadius: 4,
+    textAlign: 'center',
   },
   forecastList: {
     paddingVertical: 10,
@@ -209,6 +231,7 @@ const styles = StyleSheet.create({
     shadowRadius: 6,
     elevation: 4,
     minWidth: 120,
+    alignItems: 'center',
   },
   forecastText: {
     fontSize: 16,
@@ -216,6 +239,7 @@ const styles = StyleSheet.create({
     textShadowColor: '#00ffff',
     textShadowOffset: { width: 0, height: 0 },
     textShadowRadius: 4,
+    textAlign: 'center',
   },
   loadingText: {
     fontSize: 18,

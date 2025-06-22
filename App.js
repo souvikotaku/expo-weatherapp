@@ -86,7 +86,7 @@ export default function App() {
           component={SettingsScreen}
           options={{
             title: 'Settings',
-            headerTitleStyle: { color: '#00ffff' },
+            headerTitleStyle: { color: 'black' },
           }}
         />
       </Stack.Navigator>
