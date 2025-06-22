@@ -11,7 +11,6 @@ This app provides real-time weather updates and a 5-day forecast for selected In
 - **5-Day Forecast**: Horizontally scrollable forecast with animated icons  
 - **Unit Toggle**: Switch between Celsius and Fahrenheit  
 - **Cyberpunk Aesthetic**: Neon cyan (`#00ffff`) and pink (`#ff00ff`) styling on a dark background (`#1a1a2e`)  
-- **Custom Splash Screen**: Displays a neon weather icon during app startup  
 - **Settings Navigation**: Accessible via a gear icon in the header  
 
 ---
