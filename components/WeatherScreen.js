@@ -67,7 +67,6 @@ export default function WeatherScreen({ route, navigation }) {
     await AsyncStorage.setItem('tempUnit', newUnit);
   };
 
-  // Component to render static icon with pulse animation
   const WeatherIcon = ({ iconCode, size = 100 }) => {
     return (
       <Animatable.Image
@@ -77,7 +76,7 @@ export default function WeatherScreen({ route, navigation }) {
           height: size,
           alignSelf: 'center',
           marginVertical: 10,
-          tintColor: '#00ffff', // Neon cyan tint
+          tintColor: '#00ffff',
         }}
         animation='pulse'
         iterationCount='infinite'

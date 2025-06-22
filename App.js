@@ -31,45 +31,44 @@ export default function App() {
           options={({ navigation }) => ({
             headerShown: true,
             headerTitle: () => (
-              <>
-                <View
+              <View
+                style={{
+                  flexDirection: 'row',
+                  justifyContent: 'space-between',
+                  paddingHorizontal: 10,
+                  paddingVertical: 20,
+                  height: 60,
+                }}
+              >
+                <Text
                   style={{
-                    flexDirection: 'row',
-                    justifyContent: 'space-between',
-                    paddingHorizontal: 10,
-                    paddingVertical: 20,
+                    color: 'black',
+                    fontSize: 18,
+                    fontWeight: 'bold',
                   }}
                 >
-                  <Text
+                  Indian Cities Weather
+                </Text>
+                <TouchableOpacity
+                  onPress={() => {
+                    console.log('Settings icon pressed');
+                    navigation.navigate('Settings');
+                  }}
+                  style={{
+                    height: 25,
+                  }}
+                >
+                  <Ionicons
+                    name='settings-outline'
+                    size={25}
+                    color='black'
                     style={{
-                      color: 'black',
-                      fontSize: 18,
-                      fontWeight: 'bold',
+                      width: '100%',
+                      height: '100%',
                     }}
-                  >
-                    Indian Cities Weather
-                  </Text>
-                  <TouchableOpacity
-                    onPress={() => {
-                      console.log('Settings icon pressed');
-                      navigation.navigate('Settings');
-                    }}
-                    style={{
-                      height: 25,
-                    }}
-                  >
-                    <Ionicons
-                      name='settings-outline'
-                      size={25}
-                      color='black'
-                      style={{
-                        width: '100%',
-                        height: '100%',
-                      }}
-                    />
-                  </TouchableOpacity>
-                </View>
-              </>
+                  />
+                </TouchableOpacity>
+              </View>
             ),
           })}
         />

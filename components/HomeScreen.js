@@ -100,13 +100,13 @@ export default function HomeScreen({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#1a1a2e', // Dark cyberpunk background
+    backgroundColor: '#1a1a2e',
     padding: 20,
   },
   title: {
     fontSize: 28,
     fontWeight: 'bold',
-    color: '#00ffff', // Neon cyan
+    color: '#00ffff',
     textAlign: 'center',
     marginBottom: 20,
     textShadowColor: '#ff00ff',
@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
     marginBottom: 15,
     fontSize: 16,
     borderWidth: 1,
-    borderColor: '#ff00ff', // Neon pink border
+    borderColor: '#ff00ff',
     shadowColor: '#ff00ff',
     shadowOffset: { width: 0, height: 0 },
     shadowOpacity: 0.8,
@@ -146,7 +146,7 @@ const styles = StyleSheet.create({
   },
   cityText: {
     fontSize: 18,
-    color: '#ffffff', // White for readability
+    color: '#ffffff',
     textShadowColor: '#00ffff',
     textShadowOffset: { width: 0, height: 0 },
     textShadowRadius: 4,
