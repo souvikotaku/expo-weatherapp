@@ -1,12 +1,12 @@
 Indian Cities Weather App
-Welcome to the Indian Cities Weather App, a cyberpunk-themed React Native application built with Expo. This app displays real-time weather data and a 5-day forecast for selected Indian cities, featuring animated weather icons and a sleek, neon-inspired design.
+Welcome to the Indian Cities Weather App, a cyberpunk-themed React Native application built with Expo. This app provides real-time weather updates and a 5-day forecast for selected Indian cities, featuring animated weather icons and a neon-inspired design.
 Features
 
-Weather Display: Shows current temperature, humidity, wind speed, and conditions for a selected city.
+Weather Display: Shows current temperature, humidity, wind speed, and conditions.
 5-Day Forecast: Horizontal scrollable forecast with animated icons.
 Unit Toggle: Switch between Celsius and Fahrenheit.
 Cyberpunk Aesthetic: Neon cyan (#00ffff) and pink (#ff00ff) styling on a dark background (#1a1a2e).
-Custom Splash Screen: Features a neon weather icon during app startup.
+Custom Splash Screen: Displays a neon weather icon during app startup.
 Settings Navigation: Accessible via a gear icon in the header.
 
 Tech Stack
@@ -99,12 +99,12 @@ OpenWeatherMap: For weather API services.
 Expo: For the React Native development platform.
 
 Screenshots
-(Add screenshots of the app here, e.g., HomeScreen, WeatherScreen with animated icons, and Splash Screen. Use Markdown image syntax:)
+(Add screenshots of the app here after testing. Use Markdown image syntax:)
 ![Home Screen](./screenshots/home-screen.png)
 ![Weather Screen](./screenshots/weather-screen.png)
 ![Splash Screen](./screenshots/splash-screen.png)
 
-(Create a screenshots folder and add images after testing.)
+(Create a screenshots folder and add images later.)
 Contact
 
 GitHub: your-username
